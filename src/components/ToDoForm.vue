@@ -17,6 +17,8 @@
 </template>
 
 <script>
+import store from '../store/store.js';
+
 export default {
   methods: {
     onSubmit() {
@@ -28,9 +30,7 @@ export default {
     },
   },
   data() {
-    return {
-      label: "",
-    };
+    return store.ToDoForm;
   },
 };
 </script>

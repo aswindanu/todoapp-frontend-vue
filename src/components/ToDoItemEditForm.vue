@@ -21,7 +21,10 @@
     </div>
   </form>
 </template>
+
 <script>
+import store from '../store/store.js';
+
 export default {
   props: {
     label: {
@@ -34,9 +37,8 @@ export default {
     },
   },
   data() {
-    return {
-      newLabel: this.label,
-    };
+    store.ToDoItemEditForm.newLabel = this.label
+    return store.ToDoItemEditForm;
   },
   methods: {
     onSubmit() {

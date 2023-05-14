@@ -33,6 +33,8 @@
 </template>
 
 <script>
+import store from '../store/store.js';
+
 import ToDoItemEditForm from "./ToDoItemEditForm.vue";
 
 export default {
@@ -45,9 +47,7 @@ export default {
     id: { required: true, type: String },
   },
   data() {
-    return {
-      isEditing: false,
-    };
+    return store.ToDoItem;
   },
   computed: {
     isDone() {
